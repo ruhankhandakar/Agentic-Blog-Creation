@@ -30,7 +30,8 @@ class GraphBuilder:
         return self.graph.compile()
 
 
-# llm=GroqLLM().get_llm()
+# Below code is for langsmith langgraph studio
+llm=GroqLLM().get_llm()
 
-# graph_builder=GraphBuilder(llm)
-# graph=graph_builder.build_language_graph().compile()
+graph_builder=GraphBuilder(llm)
+graph=graph_builder.setup_graph(usecase="topic")
